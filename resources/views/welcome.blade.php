@@ -10,12 +10,12 @@
 </head>
 
 <body>
-  <header class=" py-8 md:py-12 bg-no-repeat bg-cover" style="background-image: url('img/background_image.png');">
+  <header class=" py-8 md:py-12 bg-no-repeat bg-cover" style="background-image: url('img/1737027163-6788ee5bd10dc.png')">
     <nav class=" relative customContainer flex items-center justify-between py-6">
       <div><img class=" max-w-20" src="img/logo.png" alt=""></div>
       <ul id="navItems"
         class=" bg-gray-900 md:bg-transparent  rounded-md bg-opacity-60 absolute md:relative left-0 top-full hidden md:flex w-full items-center justify-end text-white uppercase">
-        <li><a class="list_items" href="#">Home</a></li>
+        <li><a class="list_items" href="#">Dashboard</a></li>
         <li><a class="list_items" href="#">Product</a></li>
         <li><a class="list_items" href="#">Promo</a></li>
         <li><a class="list_items" href="#">About</a></li>

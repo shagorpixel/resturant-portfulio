@@ -24,6 +24,12 @@
                 </a>
             </li>
 
+            <li class="mb-1 group active">
+                <a href="{{route('header.index')}}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <span class="text-sm">Header</span>
+                </a>
+            </li>
+
         </ul>
     </div>
     <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
@@ -252,16 +258,24 @@
                             <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
         {{-- Admin Panel Main Content Start Here --}}
-        <div class=" p-6">
+
             @yield('content')
-        </div>
+
         {{-- Admin Panel Main End Start Here --}}
     </main>
     <!-- end: Main -->
